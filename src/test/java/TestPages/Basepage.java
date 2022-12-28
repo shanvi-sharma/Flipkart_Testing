@@ -77,15 +77,7 @@ public class Basepage {
 			driver= new ChromeDriver(options);
 		}
 		
-		else if(browserName.equalsIgnoreCase("IE"))
-		{
-			String projectPath= System.getProperty("user.dir");
-			System.out.println("Project Path is: "+ projectPath);
-			System.setProperty("webdriver.IEDriver.driver", projectPath+"/driver/IEDriver/IEDriverServer.exe");
-			InternetExplorerOptions options = new InternetExplorerOptions();
-			driver= new InternetExplorerDriver(options);
-		}
-				
+		
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(1));
